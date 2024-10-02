@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hozzáadás</title>
+</head>
+<body>
+    <h2>Számlanyitás</h2>
+    <form action="/openAccount" method="post">
+        <input type="text" placeholder="Számlaszám" name="id" value="<%=data.id%>"><br>
+        <input type="number" placeholder="Egyenleg" name="balance" value="<%=data.balance%>"><br>
+        <input type="text" placeholder="Név" name="owner" value="<%=data.owner%>"><br>
+        <input type="date" min="2024-09-30"><br>
+        <input type="submit">
+
+        <%for (let e of errors){ %>
+            <p style="color: red;"><%=e%></p>
+        <%}%>
+    </form>
+</body>
+</html> 
